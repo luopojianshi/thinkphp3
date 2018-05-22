@@ -1,0 +1,166 @@
+/* 浮动与清除浮动 */
+.fl {
+  float: left;
+}
+.fr {
+  float: right;
+}
+.clearfix {
+  zoom: 1;
+}
+.clearfix::after {
+  content: "";
+  display: block;
+  clear: both;
+}
+/* 隐藏样式 */
+.hide,
+.hidden {
+  display: none;
+}
+/* 输入框样式 */
+input:-webkit-autofill {
+  -webkit-box-shadow: 0 0 0px 1000px white inset !important;
+}
+input::-ms-clear {
+  display: none;
+}
+input::-ms-reveal {
+  display: none;
+}
+::-moz-placeholder {
+  /* Mozilla Firefox 19+ */
+  color: #999;
+}
+:-moz-placeholder {
+  /* Mozilla Firefox 4 to 18 */
+  color: #999;
+}
+::-webkit-input-placeholder {
+  /* WebKit browsers */
+  color: #999;
+}
+:-ms-input-placeholder {
+  /* Internet Explorer 10+ */
+  color: #999;
+}
+/* 文本样式 */
+.ta-l {
+  text-align: left;
+}
+.ta-r {
+  text-align: right;
+}
+.ta-c {
+  text-align: center;
+}
+.text-ellipsis {
+  white-space: nowrap;
+  text-overflow: ellipsis;
+  overflow: hidden;
+}
+/* 光标样式 */
+.cursor-m {
+  cursor: move;
+}
+.cursor-t {
+  cursor: text;
+}
+.cursor-w {
+  cursor: wait;
+}
+.cursro-h {
+  cursor: help;
+}
+.cursor-p {
+  cursor: pointer;
+}
+/* 清除默认样式 */
+* {
+  margin: 0;
+  padding: 0;
+  box-sizing: border-box;
+}
+html,
+body {
+  min-height: 100%;
+}
+body {
+  font-family: 'Microsoft YaHei';
+  font-size: 14px;
+  color: #333;
+}
+ol,
+ul {
+  list-style: none;
+}
+li {
+  list-style-type: none;
+}
+h1,
+h2,
+h3,
+h4,
+h5,
+h6 {
+  font-weight: normal;
+}
+a,
+a:link,
+a:visited,
+a:hover,
+a:active {
+  text-decoration: none;
+}
+input,
+textarea {
+  outline: none;
+}
+textarea {
+  resize: none;
+  overflow: auto;
+}
+/* .add-message */
+.add-message {
+  width: 300px;
+  margin: 30px auto;
+}
+.add-message .title {
+  display: block;
+  font-size: 20px;
+  font-weight: bold;
+  color: #000000;
+}
+.add-message .line {
+  margin: 20px 0;
+}
+/* .input-group */
+.input-group {
+  width: 100%;
+  margin: 10px 0;
+  font-size: 16px;
+  color: #333333;
+}
+.input-group .label {
+  width: 50px;
+  height: 30px;
+  line-height: 30px;
+}
+.input-group .fields,
+.input-group .area-fields {
+  width: calc(100% - 50px);
+  height: 30px;
+  padding: 5px;
+  border-radius: 4px;
+  border: 1px solid #cccccc;
+  line-height: 20px;
+}
+.input-group .area-fields {
+  height: 80px;
+}
+.input-group .button {
+  width: calc(50% - 50px);
+  height: 30px;
+  margin: 0 10px;
+  line-height: 30px;
+}

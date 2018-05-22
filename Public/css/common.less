@@ -1,0 +1,60 @@
+@import "base.less";
+
+// 主题色
+
+// 边框与默认圆角半径
+@border-w: 1px;
+@border-c: #ccc;
+@border-s: solid;
+@border-r: 4px;
+
+/* 清除默认样式 */
+* {margin: 0;padding: 0;box-sizing: border-box;}
+html, body {min-height: 100%;}
+body {font-family: 'Microsoft YaHei';font-size: 14px;color: #333;}
+ol, ul {list-style: none;}
+li {list-style-type: none;}
+h1, h2, h3, h4, h5, h6 {font-weight: normal;}
+a, a:link, a:visited, a:hover, a:active {text-decoration: none;}
+input, textarea {outline: none;}
+textarea {resize: none;overflow: auto;}
+
+/* .add-message */
+.add-message {
+  width: 300px;
+  margin: 30px auto;
+  .title {
+    display: block;
+    font-size: 20px;
+    font-weight: bold;
+    color: @color-0;
+  }
+  .line {margin: 20px 0;}
+}
+/* .input-group */
+.input-group {
+  width: 100%;
+  margin: 10px 0;
+  font-size: 16px;
+  color: @color-3;
+  .label {
+    width: 50px;
+    height: 30px;
+    line-height: 30px;
+  }
+  .fields, .area-fields {
+    width: calc(~'100% - 50px');
+    height: 30px;
+    padding: 5px;
+    border-radius: @border-r;
+    border: @border-w @border-s @border-c;
+    line-height: 20px;
+  }
+  .area-fields {height: 80px;}
+  .button {
+    width: calc(~'50% - 50px');
+    height: 30px;
+    margin: 0 10px;    
+    line-height: 30px;
+  }
+}
