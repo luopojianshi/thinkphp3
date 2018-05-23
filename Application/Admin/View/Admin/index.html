@@ -9,15 +9,15 @@
     <meta http-equiv="X-UA-Compatible" content="IE=edge">
     <meta http-equiv="Content-Type" content="text/html; charset=UTF-8">
     <!--Basic Styles-->
-    <link href="/Public/style/bootstrap.css" rel="stylesheet">
-    <link href="/Public/style/font-awesome.css" rel="stylesheet">
-    <link href="/Public/style/weather-icons.css" rel="stylesheet">
+    <link href="__PUBLIC__/css/bootstrap.css" rel="stylesheet">
+    <link href="__PUBLIC__/css/font-awesome.css" rel="stylesheet">
+    <link href="__PUBLIC__/css/weather-icons.css" rel="stylesheet">
 
     <!--Beyond styles-->
-    <link id="beyond-link" href="/Public/style/beyond.css" rel="stylesheet" type="text/css">
-    <link href="/Public/style/demo.css" rel="stylesheet">
-    <link href="/Public/style/typicons.css" rel="stylesheet">
-    <link href="/Public/style/animate.css" rel="stylesheet">
+    <link id="beyond-link" href="__PUBLIC__/css/beyond.css" rel="stylesheet" type="text/css">
+    <!-- <link href="/Public/style/demo.css" rel="stylesheet"> -->
+    <link href="__PUBLIC__/css/typicons.css" rel="stylesheet">
+    <link href="__PUBLIC__/css/animate.css" rel="stylesheet">
 </head>
 <body>
 	  <!-- 头部 -->
@@ -44,7 +44,8 @@
 
                 <!-- Page Body -->
                 <div class="page-body">
-                    <button type="button" tooltip="添加用户" class="btn btn-sm btn-azure btn-addon" onClick="javascript:window.location.href = '__CONTROLLER__/add'">
+                    <button type="button" tooltip="添加用户" class="btn btn-sm btn-azure btn-addon" 
+                      onClick="javascript:window.location.href = '__CONTROLLER__/add'">
                         <i class="fa fa-plus"></i> Add
                     </button>
                     <div class="row">
@@ -69,7 +70,9 @@
                                                             <a href="__CONTROLLER__/edit/id/{$vo.id}" class="btn btn-primary btn-sm shiny">
                                                                 <i class="fa fa-edit"></i> 编辑
                                                             </a>
-                                                            <a href="#" onClick="warning('确实要删除吗', '__CONTROLLER__/del/id/{$vo.id}')" class="btn btn-danger btn-sm shiny">
+                                                            <!-- <a href="#" onClick="warning('确定要删除吗', '__CONTROLLER__/del/id/{$vo.id}')" class="btn btn-danger btn-sm shiny"> -->
+                                                            <a href="#" class="btn btn-danger btn-sm shiny" data-toggle="modal" data-target="#delModal"
+                                                              onClick="$('#confirm').attr('onClick', 'javascript:window.location.href=\'__CONTROLLER__/del/id/{$vo.id}\'')">
                                                                 <i class="fa fa-trash-o"></i> 删除
                                                             </a>
                                                         </td>
@@ -96,9 +99,28 @@
 	  </div>
 
 	  <!--Basic Scripts-->
-    <script src="/Public/style/jquery_002.js"></script>
-    <script src="/Public/style/bootstrap.js"></script>
-    <script src="/Public/style/jquery.js"></script>
+    <script src="__PUBLIC__/js/jquery.min.js"></script>
+    <script src="__PUBLIC__/js/bootstrap.js"></script>
     <!--Beyond Scripts-->
-    <script src="/Public/style/beyond.js"></script>
-</body></html>
+    <script src="__PUBLIC__/js/beyond.js"></script>
+
+    <div class='modal fade' id='delModal' tabindex='-1' role='dialog' aria-labelledby='delModalLabel'>
+        <div class='modal-dialog' role='document'>
+            <div class='modal-content'>
+                <div class='modal-header' style='height:65px;'>
+                    <span class='text-center col-sm-11 h4 myModal_nackName' style='margin-top:10px;'>确定要删除吗?</span>
+                    <button type='button' class='close' data-dismiss='modal' aria-label='Close'>
+                        <span aria-hidden='true'>&times;</span>
+                    </button>
+                </div>
+                <!-- <div class='modal-body'>
+                </div> -->
+                <div class='modal-footer'>
+                    <button type="button" class="btn btn-primary" data-dismiss="modal" id="confirm">确定</button>
+                    <button type='button' class='btn' data-dismiss='modal' id='disappear'>关闭</button>
+                </div>
+            </div>
+        </div>
+    </div>
+</body>
+</html>
