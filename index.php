@@ -22,7 +22,9 @@ define('APP_DEBUG', true);
 // 定义应用目录
 define('APP_PATH', './Application/');
 // 站点路径
-define('SITE_URL', '//localhost/');
+define('SITE_URL', $_SERVER['REQUEST_SCHEME'].'://'.$_SERVER['HTTP_HOST']);
+// Public 路径
+define('__PUBLIC__', $_SERVER['REQUEST_SCHEME'].'://'.$_SERVER['HTTP_HOST'].'thinkphp3/Public');
 
 // 引入ThinkPHP入口文件
 require './ThinkPHP/ThinkPHP.php';

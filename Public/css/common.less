@@ -58,3 +58,37 @@ textarea {resize: none;overflow: auto;}
     line-height: 30px;
   }
 }
+/* .login-container */
+.login-box {
+  width: 400px;
+  margin: 100px auto;
+  padding: 20px 40px 40px;
+  border-radius: @border-r;
+  border: @border-w @border-s @border-c;
+  .title {
+    color: @color-6;
+    font-size: 18px;
+    line-height: 24px;
+  }
+  .input-wrapper {
+    margin-top: 20px;
+    .form-control, .img-verify {height: 50px;}
+    &.clearfix {
+      .form-control {width: 180px}
+      .img-verify {width: calc(~'100% - 180px');}
+    }
+  }
+}
+/* .navbar */
+.navbar {
+  .navbar-header {
+    .navbar-brand {
+      width: 200px;
+      height: 50px;
+      padding: 0px;
+      .navbar-logo {width: 100%;height: 100%;}
+    }
+  }
+}
+
+.text-red, .danger {color: #f00;}
