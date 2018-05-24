@@ -2,7 +2,7 @@
 <html>
 <head>
 	  <meta charset="utf-8">
-    <title>编辑管理员</title>
+    <title>添加用户</title>
     <include file="Common/head" />
 </head>
 <body>
@@ -10,9 +10,9 @@
     <include file="Common/header" />
     <!-- /头部 -->
 
-    <div class="main-container container-fluid">
-        <div class="page-container">
-            <!-- Page Sidebar -->
+	  <div class="main-container container-fluid">
+		    <div class="page-container">
+			      <!-- Page Sidebar -->
             <include file="Common/left" />
             <!-- /Page Sidebar -->
             <!-- Page Content -->
@@ -20,42 +20,46 @@
                 <!-- Page Breadcrumb -->
                 <div class="page-breadcrumbs">
                     <ul class="breadcrumb">
-                        <li><a href="__MODULE__/Index/index">系统</a></li>
-                        <li><a href="__CONTROLLER__/index">管理员列表</a></li>
-                        <li class="active">编辑管理员</li>
+                        <li>
+                            <a href="#">系统</a>
+                        </li>
+                        <li>
+                            <a href="#">用户管理</a>
+                        </li>
+                        <li class="active">添加用户</li>
                     </ul>
                 </div>
                 <!-- /Page Breadcrumb -->
+
                 <!-- Page Body -->
                 <div class="page-body">
                     <div class="row">
                         <div class="col-lg-12 col-sm-12 col-xs-12">
                             <div class="widget">
                                 <div class="widget-header bordered-bottom bordered-blue">
-                                    <span class="widget-caption">编辑管理员</span>
+                                    <span class="widget-caption">新增商品分类</span>
                                 </div>
                                 <div class="widget-body">
                                     <div id="horizontal-form">
                                         <form class="form-horizontal" role="form" action="" method="post">
-                                            <input type="hidden" name="id" value="{$admins.id}">
                                             <div class="form-group">
-                                                <label for="username" class="col-sm-2 control-label no-padding-right">用户名</label>
+                                                <label for="catename" class="col-sm-2 control-label no-padding-right">分类名称</label>
                                                 <div class="col-sm-6">
-                                                    <input type="text" class="form-control" id="username" placeholder="请输入用户名"
-                                                      value="{$admins.username}" name="username" required>
+                                                    <input class="form-control" id="catename" placeholder="" name="catename" required="" type="text">
                                                 </div>
-                                                <p class="help-block col-sm-4 red">* 必填</p>
+                                                <p class="help-block col-sm-4 text-red">* 必填</p>
                                             </div>
                                             <div class="form-group">
-                                                <label for="group_id" class="col-sm-2 control-label no-padding-right">密码</label>
+                                                <label for="group_id" class="col-sm-2 control-label no-padding-right">上级分类</label>
                                                 <div class="col-sm-6">
-                                                    <input type="password" class="form-control" id="password" 
-                                                      placeholder="请输入密码, 留空则表示不修改密码" name="password">
+                                                    <select class="form-control" name="group_id">
+                                                      <option value="0">顶级分类</option>
+                                                    </select>
                                                 </div>
                                             </div>
                                             <div class="form-group">
                                                 <div class="col-sm-offset-2 col-sm-10">
-                                                    <button class="btn" type="submit">保存信息</button>
+                                                    <button type="submit" class="btn btn-primary">保存信息</button>
                                                 </div>
                                             </div>
                                         </form>
@@ -65,13 +69,10 @@
                         </div>
                     </div>
                 </div>
+                <!-- /Page Body -->
             </div>
-        </div>
-    </div>
-
-	  <!--Basic Scripts-->
-    <script src="__PUBLIC__/js/jquery.min.js"></script>
-    <script src="__PUBLIC__/js/bootstrap.js"></script>
-    <!--Beyond Scripts-->
-    <script src="__PUBLIC__/js/beyond.js"></script>
-</body></html>
+            <!-- /Page Content -->
+		    </div>
+	  </div>
+</body>
+</html>

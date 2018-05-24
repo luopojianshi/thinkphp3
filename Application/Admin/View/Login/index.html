@@ -1,0 +1,36 @@
+<!DOCTYPE html>
+<html>
+<head>
+	  <meta charset="utf-8">
+    <title>账号登录</title>
+    <include file="Common/head" />
+</head>
+<body>
+    <div class="login-container animated fadeInDown">
+        <form action="" method="post">
+            <div class="login-box bg-white">
+                <div class="title ta-c">登录</div>
+                <div class="input-wrapper">
+                    <input class="form-control" type="text" name="username" placeholder="username">
+                </div>
+                <div class="input-wrapper">
+                    <input class="form-control" type="password" name="password" placeholder="password">
+                </div>
+                <div class="input-wrapper clearfix">
+                    <input class="form-control fl" type="text" name="verify" placeholder="验证码">
+                    <img class="img-verify cursor-p fl" src="__CONTROLLER__/verify" onclick="this.src='__CONTROLLER__/verify/'+Math.random();">
+                </div>
+                <div class="input-wrapper">
+                    <input class="btn btn-primary btn-block form-control" type="submit" value="Login">
+                </div>
+            </div>
+        </form>
+    </div>
+
+	  <!--Basic Scripts-->
+    <script src="__PUBLIC__/js/jquery.min.js"></script>
+    <script src="__PUBLIC__/js/bootstrap.js"></script>
+    <!--Beyond Scripts-->
+    <script src="__PUBLIC__/js/beyond.js"></script>
+</body>
+</html>

@@ -1,11 +1,11 @@
 <div class="navbar">
     <div class="navbar-inner">
-        <div class="navbar-container">
+        <div class="navbar-container clearfix">
             <!-- Navbar Barnd -->
             <div class="navbar-header pull-left">
                 <a href="#" class="navbar-brand">
                     <small>
-                        <img src="__PUBLIC__/img/logo.png" alt="">
+                        <img class="navbar-logo" src="__PUBLIC__/img/logo.png">
                     </small>
                 </a>
             </div>
@@ -25,17 +25,17 @@
                                     <img src="">
                                 </div>
                                 <section>
-                                    <h2><span class="profile"><span>admin</span></span></h2>
+                                    <h2><span class="profile cursor-p"><span>{$Think.session.username}</span></span></h2>
                                 </section>
                             </a>
                             <!--Login Area Dropdown-->
                             <ul class="pull-right dropdown-menu dropdown-arrow dropdown-login-area">
-                                <li class="username"><a>David Stevenson</a></li>
+                                <li class="username"><a>{$Think.session.username}</a></li>
                                 <li class="dropdown-footer">
-                                    <a href="/admin/user/logout.html">退出登录</a>
+                                    <a href="__MODULE__/Admin/logout">退出登录</a>
                                 </li>
                                 <li class="dropdown-footer">
-                                    <a href="/admin/user/changePwd.html">修改密码</a>
+                                    <a href="__MODULE__/Admin/edit/id/{$Think.session.uid}">修改密码</a>
                                 </li>
                             </ul>
                             <!--/Login Area Dropdown-->
